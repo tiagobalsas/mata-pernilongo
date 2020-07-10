@@ -24,14 +24,15 @@ console.log(posicaoY,posicaoX)
 
 var pernilongo = document.createElement('img')
 pernilongo.src = 'img/pernilongo.png'
-pernilongo.className = tamanhoAleatorio()
+pernilongo.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
 pernilongo.style.left = posicaoX + 'px'
 pernilongo.style.top = posicaoY + 'px'
 pernilongo.style.position = 'absolute'
 
 document.body.appendChild(pernilongo)
 
-// Função para criar tamanhos randomincos
+
+// Função para criar tamanhos randomincos do penilongo
 
 function tamanhoAleatorio() {
     var classes = Math.floor(Math.random() * 3)
@@ -49,3 +50,19 @@ function tamanhoAleatorio() {
     }
 
 }
+
+//criando lados aleatórios do pernilongo
+
+function ladoAleatorio() {
+    var classes = Math.floor(Math.random() * 2)
+    
+    switch(classes) {
+        case 0:
+            return 'ladoA'
+
+        case 1:
+            return 'ladoB'
+        }
+    }
+            
+        
