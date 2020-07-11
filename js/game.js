@@ -1,17 +1,25 @@
 /* Criando a lógica para redimensionar a tela */
+    var altura = 0
+    var largura =0
+    var hearts = 1
 
 function posicaoRandomica() {
-
+    
     //remover o pernilongo anterior (caso ele existir)
     if(document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
+        
+        if(hearts > 3) {
+            alert('Game over')
+        }else {
+            
+            document.getElementById('heart' + hearts).src = 'img/coracao_vazio.png'
+            hearts++
+        }
     }
-
-
-
-    var altura = 0
-    var largura =0
     
+    
+
     function ajustaTela() {
         altura = window.innerHeight
         largura =  window.innerWidth
@@ -38,6 +46,11 @@ function posicaoRandomica() {
     pernilongo.style.top = posicaoY + 'px'
     pernilongo.style.position = 'absolute'
     pernilongo.id = 'mosquito'
+    
+    // função para remover o pernilongo
+    pernilongo.onclick = function() {
+        this.remove()
+    }
     
     document.body.appendChild(pernilongo)
 
@@ -77,5 +90,8 @@ function ladoAleatorio() {
             return 'ladoB'
         }
     }
+
+
+    
             
         
