@@ -34,7 +34,7 @@ function posicaoRandomica() {
 
         tempo --
 
-        if(tempo == 0) {
+        if(tempo < 0) {
             window.location.href = 'old.html'
         }else{
 
