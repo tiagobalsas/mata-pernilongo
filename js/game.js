@@ -63,7 +63,7 @@ function posicaoRandomica() {
     tempo --
 
     if(tempo < 0) {
-        window.location.href = 'old.html'
+        window.location.href = 'the-end.html'
     }else{
 
         document.getElementById('cronometro').innerHTML = tempo
