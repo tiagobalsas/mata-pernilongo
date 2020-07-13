@@ -34,10 +34,8 @@ function posicaoRandomica() {
 
         tempo --
 
-        if(tempo < 0) {
-            clearInterval(cronometro)
-            clearInterval(criaPernilongo)
-            alert('Vitoria')
+        if(tempo == 0) {
+            window.location.href = 'old.html'
         }else{
 
             document.getElementById('cronometro').innerHTML = tempo
