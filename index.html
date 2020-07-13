@@ -18,7 +18,7 @@
                         <img id="heart3" src="img/coracao_cheio.png" alt="imagem que representa uma figura de um coração cheio">
                     </div>
         
-                    <div class="cronometro">Tempo restante ??</div>
+                    <div class="cronometro">Tempo restante <span id="cronometro"></span></div>
         
                 </div>
             </div>
@@ -26,8 +26,11 @@
     </body>
     <script src="js/game.js"></script>
     <script>
-        setInterval(function(){
+        
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criaPernilongo = setInterval(function(){
             posicaoRandomica()
-        }, 1000)
+        }, 2000)
     </script>
 </html>

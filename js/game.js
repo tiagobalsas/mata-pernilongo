@@ -2,6 +2,7 @@
     var altura = 0
     var largura =0
     var hearts = 1
+    var tempo = 15
 
 function posicaoRandomica() {
     
@@ -26,6 +27,23 @@ function posicaoRandomica() {
         console.log(altura,largura)
     }
     ajustaTela()
+
+    // variável que vai receber o tempo
+
+    var cronometro = setInterval(function() {
+
+        tempo --
+
+        if(tempo < 0) {
+            clearInterval(cronometro)
+            clearInterval(criaPernilongo)
+            alert('Vitoria')
+        }else{
+
+            document.getElementById('cronometro').innerHTML = tempo
+        }
+
+    }, 1000)
     
     // Criando posições randomincas
     
