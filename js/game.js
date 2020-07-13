@@ -4,6 +4,13 @@
     var hearts = 1
     var tempo = 15
 
+    function ajustaTela() {
+        altura = window.innerHeight
+        largura =  window.innerWidth
+        console.log(altura,largura)
+    }
+    ajustaTela()
+
 function posicaoRandomica() {
     
     //remover o pernilongo anterior (caso ele existir)
@@ -18,30 +25,7 @@ function posicaoRandomica() {
             hearts++
         }
     }
-    
-    
 
-    function ajustaTela() {
-        altura = window.innerHeight
-        largura =  window.innerWidth
-        console.log(altura,largura)
-    }
-    ajustaTela()
-
-    // variável que vai receber o tempo
-
-    var cronometro = setInterval(function() {
-
-        tempo --
-
-        if(tempo < 0) {
-            window.location.href = 'old.html'
-        }else{
-
-            document.getElementById('cronometro').innerHTML = tempo
-        }
-
-    }, 1000)
     
     // Criando posições randomincas
     
@@ -72,7 +56,20 @@ function posicaoRandomica() {
 
 }
 
+  // variável que vai receber o tempo
 
+  var cronometro = setInterval(function() {
+
+    tempo --
+
+    if(tempo < 0) {
+        window.location.href = 'old.html'
+    }else{
+
+        document.getElementById('cronometro').innerHTML = tempo
+    }
+
+}, 1000)
 
 // Função para criar tamanhos randomincos do penilongo
 
