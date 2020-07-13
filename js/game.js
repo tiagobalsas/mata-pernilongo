@@ -10,7 +10,7 @@ function posicaoRandomica() {
         document.getElementById('mosquito').remove()
         
         if(hearts > 3) {
-            alert('Game over')
+            window.location.href = 'gameover.html'
         }else {
             
             document.getElementById('heart' + hearts).src = 'img/coracao_vazio.png'
