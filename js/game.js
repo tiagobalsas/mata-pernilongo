@@ -4,11 +4,28 @@
     var hearts = 1
     var tempo = 15
 
+    criaPernilongoTempo = 1500
+
+    var nivel = window.location.search
+   
+    nivel = nivel.replace('?','')
+
+    if(nivel === 'iniciante') {
+        criaPernilongoTempo = 1500
+
+    } else if(nivel === 'intermediario') {
+        criaPernilongoTempo = 1000
+
+    } else if(nivel === 'experiente') {
+        criaPernilongoTempo = 750
+
+    }
+
     function ajustaTela() {
         altura = window.innerHeight
         largura =  window.innerWidth
-        console.log(altura,largura)
     }
+
     ajustaTela()
 
 function posicaoRandomica() {
