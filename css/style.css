@@ -1,3 +1,7 @@
+html {
+    cursor: url(../img/mata_pernilongo.png) 30 30 auto;
+}
+
 body {
     background-image: url(../img/bg.jpg);
     background-repeat:  no-repeat;
